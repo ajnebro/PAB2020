@@ -8,7 +8,9 @@ package org.pab2020.factorial;
 public class Factorial {
   public long compute(long value) {
     long result;
-    if ((value == 0) || (value == 1)) {
+    if (value < 0) {
+      throw new RuntimeException("Negative number: " + value) ;
+    } else if ((value == 0) || (value == 1)) {
       result = 1;
     } else {
       result = value * compute(value - 1);
