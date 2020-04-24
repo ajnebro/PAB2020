@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * - 1 -> 1
  * - 2 -> 2
  * - 4 -> 24
- * - negative -> ??
+ * - negative -> raise an exception
  */
 class FactorialTest {
   private Factorial factorial ;
