@@ -1,5 +1,6 @@
 package org.pab2020;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -51,5 +52,10 @@ class FactorialTest {
     long obtainedValue = factorial.compute(4) ;
 
     assertEquals(expectedValue, obtainedValue) ;
+  }
+
+  @Test
+  public void shouldFactorialOfANegativeNumberRaiseAnException() {
+    Assertions.assertThrows(RuntimeException.class, () -> factorial.compute(-1)) ;
   }
 }

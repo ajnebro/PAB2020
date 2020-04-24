@@ -8,7 +8,10 @@ package org.pab2020;
 public class Factorial {
   public long compute(long number) {
     long result;
-    if ((number == 0) || (number == 1)) {
+
+    if (number < 0) {
+      throw new RuntimeException("The number is negative") ;
+    } else if ((number == 0) || (number == 1)) {
       result = 1;
     } else {
       result = number * compute(number - 1) ;
