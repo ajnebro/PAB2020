@@ -1,5 +1,6 @@
 package org.pab2020.factorial ;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -14,11 +15,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  * - negative -> ??
  */
 class FactorialTest {
+  private Factorial factorial ;
+
+  @BeforeEach
+  public void setup() {
+    factorial = new Factorial() ;
+  }
 
   @Test
   public void shouldFactorialOf0Return1() {
-    Factorial factorial = new Factorial() ;
-
     long expectedValue = 1 ;
     long obtainedValue = factorial.compute(0) ;
 
@@ -27,8 +32,6 @@ class FactorialTest {
 
   @Test
   public void shouldFactorialOf1Return1() {
-    Factorial factorial = new Factorial() ;
-
     long expectedValue = 1 ;
     long obtainedValue = factorial.compute(1) ;
 
@@ -37,8 +40,6 @@ class FactorialTest {
 
   @Test
   public void shouldFactorialOf2Return2() {
-    Factorial factorial = new Factorial() ;
-
     long expectedValue = 2 ;
     long obtainedValue = factorial.compute(2) ;
 
@@ -47,8 +48,6 @@ class FactorialTest {
 
   @Test
   public void shouldFactorialOf4Return24() {
-    Factorial factorial = new Factorial() ;
-
     long expectedValue = 24 ;
     long obtainedValue = factorial.compute(4) ;
 
@@ -57,8 +56,6 @@ class FactorialTest {
 
   @Test
   public void shouldFactorialOfANegativeNumberRaiseAnException() {
-    Factorial factorial = new Factorial() ;
-
     assertThrows(RuntimeException.class, () -> factorial.compute(-1));
   }
 }
