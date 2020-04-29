@@ -1,8 +1,9 @@
-package org.pab2020;
+package org.pab2020.factorial;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.pab2020.factorial.Factorial;
 
 import static org.junit.jupiter.api.Assertions.*;
 

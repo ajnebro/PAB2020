@@ -1,4 +1,4 @@
-package org.pab2020;
+package org.pab2020.factorial;
 
 /**
  * Class to compute the factorial of an integer number
@@ -14,7 +14,10 @@ public class Factorial {
     } else if ((number == 0) || (number == 1)) {
       result = 1;
     } else {
-      result = number * compute(number - 1) ;
+      result = 1 ;
+      for (int i = 2; i <= number; i++)  {
+        result = result * i ;
+      }
     }
     return result;
   }
