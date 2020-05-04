@@ -13,7 +13,7 @@ public class SumNumbers {
     long initTime = System.currentTimeMillis() ;
 
     double sum = numbers
-            .parallelStream()
+            .stream()
             .reduce(0, (number1, number2) -> number1 + number2) ;
     
     long totalTime = System.currentTimeMillis() - initTime ;

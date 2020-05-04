@@ -10,7 +10,7 @@ public class HeavyFactorial extends Factorial {
 
   @Override
   public long compute(long value) {
-    for (long i = 0 ; i < 80000000 ; i++) {
+    for (long i = 0 ; i < 800000 ; i++) {
       double dummy = Math.sin(2.3 + i) * Math.cos(i) ;
     }
 

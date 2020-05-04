@@ -2,7 +2,9 @@ package org.pab2020.parallel;
 
 import org.pab2020.factorial.HeavyFactorial;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.CompletionService;
 import java.util.stream.Collectors;
 
 public class ParallelFactorialWithFilter {
@@ -24,9 +26,17 @@ public class ParallelFactorialWithFilter {
     long totalTime = System.currentTimeMillis() - initTime ;
 
     System.out.println("Total computing time: " + totalTime + " milliseconds") ;
-    for (int i = 0; i < factorialValues.size(); i++) {
-      System.out.println(factorialValues.get(i).get(0) + ": " + factorialValues.get(i).get(1)) ;
-    }
+
+    Comparator<List<Long>> comparator = (pair1, pair2) -> pair1.get(0).compareTo(pair2.get(0)) ;
+
+    factorialValues
+            .stream()
+            .sorted(comparator.reversed())
+            .forEach(pair -> System.out.println(pair.get(0) + ": " + pair.get(1)));
+
+    //for (List<Long> factorialValue : factorialValues) {
+    //  System.out.println(factorialValue.get(0) + ": " + factorialValue.get(1));
+    //}
 
     System.out.println("Number of factorial.compute() operations: " + factorial.getNumberOfComputeCalls()) ;
   }

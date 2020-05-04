@@ -10,7 +10,6 @@ public class SumNumbersFromFile {
 
     double sum = Files
             .lines(Paths.get("data/manyNumbers.txt"))
-            .parallel()
             .map(line -> Integer.valueOf(line))
             .reduce(0, (number1, number2) -> number1 + number2) ;
     
