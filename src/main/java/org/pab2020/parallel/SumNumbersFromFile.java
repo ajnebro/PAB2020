@@ -10,7 +10,8 @@ public class SumNumbersFromFile {
 
     double sum = Files
             .lines(Paths.get("data/manyNumbers.txt"))
-            .map(line -> Integer.valueOf(line))
+            .parallel()
+            .map(Integer::valueOf)
             .reduce(0, (number1, number2) -> number1 + number2) ;
     
     long totalTime = System.currentTimeMillis() - initTime ;

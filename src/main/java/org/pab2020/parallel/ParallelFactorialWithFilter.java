@@ -27,17 +27,11 @@ public class ParallelFactorialWithFilter {
 
     System.out.println("Total computing time: " + totalTime + " milliseconds") ;
 
-    Comparator<List<Long>> comparator = (pair1, pair2) -> pair1.get(0).compareTo(pair2.get(0)) ;
+    Comparator<List<Long>> comparator = Comparator.comparing(pair -> pair.get(0));
 
     factorialValues
             .stream()
             .sorted(comparator.reversed())
             .forEach(pair -> System.out.println(pair.get(0) + ": " + pair.get(1)));
-
-    //for (List<Long> factorialValue : factorialValues) {
-    //  System.out.println(factorialValue.get(0) + ": " + factorialValue.get(1));
-    //}
-
-    System.out.println("Number of factorial.compute() operations: " + factorial.getNumberOfComputeCalls()) ;
   }
 }
