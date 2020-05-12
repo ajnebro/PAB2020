@@ -8,20 +8,19 @@ public class SumNumbersWithCriticalSection {
   public void run() throws IOException {
     long initTime = System.currentTimeMillis() ;
 
-    class Sum {
-      private int sum = 0 ;
+    class Counter {
+      private int counter = 0 ;
 
-      public void compute() {
-        sum = sum + 1 ;
+      public synchronized void compute() {
+        counter = counter + 1 ;
       }
 
       public int getSum() {
-        return sum ;
+        return counter ;
       }
     }
 
-    //int numberOfMaps = 0 ;
-    Sum numberOfMaps = new Sum()  ;
+    Counter numberOfMaps = new Counter()  ;
 
     long numberOfLines = Files
             .lines(Paths.get("data/manyNumbers.txt"))
@@ -29,7 +28,6 @@ public class SumNumbersWithCriticalSection {
 
     int sum = Files
             .lines(Paths.get("data/manyNumbers.txt"))
-            .parallel()
             .map(line -> {
               numberOfMaps.compute();
               return Integer.valueOf(line);
