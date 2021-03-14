@@ -1,4 +1,4 @@
-package org.pab2020.factorial ;
+package org.pab2020.mathUtils;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

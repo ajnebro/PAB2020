@@ -1,4 +1,4 @@
-package org.pab2020.factorial;
+package org.pab2020.mathUtils;
 
 /**
  * This class implements a method to compute the factorial of an integer number.
