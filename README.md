@@ -2,7 +2,7 @@
 
 ![GitHub top language](https://img.shields.io/github/languages/top/olegbrz/PAB2020)
 ![GitHub last commit](https://img.shields.io/github/last-commit/olegbrz/PAB2020)
-![Travis CI](https://travis-ci.com/olegbrz/PAB2020.svg?branch=master)
+[![Build Status](https://travis-ci.com/olegbrz/PAB2020.svg?branch=master)](https://travis-ci.com/olegbrz/PAB2020)
 
 Este repositorio se usa para subir los proyectos iniciales de Java + Maven + jUnit + Travis CI
 
