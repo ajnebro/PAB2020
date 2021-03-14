@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/olegbrz/PAB2020)
 ![Travis CI](https://travis-ci.com/olegbrz/PAB2020.svg?branch=master)
 
-Este repositorio se usa para subir los proyectos iniciales de Java + Maven + jUnit
+Este repositorio se usa para subir los proyectos iniciales de Java + Maven + jUnit + Travis CI
 
 El proyecto incluye un paquete con dos clases:
 
